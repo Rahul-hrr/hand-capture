@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Gesture Particle System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="ui">
+        <h2 style="margin:0">Hand Morph Particle System</h2>
+        <p>Current Shape: <b id="gesture-name">Sphere</b></p>
+        <div class="hint">☝️ <b>1 Finger:</b> Sphere</div>
+        <div class="hint">✌️ <b>2 Fingers:</b> Heart</div>
+        <div class="hint">🤟 <b>3 Fingers:</b> Flower</div>
+        <div class="hint">🖐️ <b>Full Hand:</b> Saturn</div>
+        <div class="hint">🤏 <b>Pinch Index/Thumb:</b> Expand/Contract</div>
+    </div>
+
+    <div id="video-container">
+        <video id="video" autoplay playsinline></video>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
